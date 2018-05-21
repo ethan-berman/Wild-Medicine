@@ -8,7 +8,7 @@
 
 import UIKit
 
-class assessmentController: UIViewController {
+class AssessmentController: UIViewController {
     var myString = String()
     var pat = Patient()
     @IBOutlet weak var output: UILabel!

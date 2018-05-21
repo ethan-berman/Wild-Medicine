@@ -318,7 +318,7 @@
         <!--Sample Controller-->
         <scene sceneID="iyW-rh-JgY">
             <objects>
-                <viewController storyboardIdentifier="sample" id="gQB-IU-VHL" customClass="sampleController" customModule="Wild_Medicine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sample" id="gQB-IU-VHL" customClass="SampleController" customModule="Wild_Medicine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oWI-6a-pq6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -439,7 +439,7 @@
         <!--Assessment Controller-->
         <scene sceneID="dbt-1K-BF9">
             <objects>
-                <viewController storyboardIdentifier="assessment" id="b7o-2K-6mY" customClass="assessmentController" customModule="Wild_Medicine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="assessment" id="b7o-2K-6mY" customClass="AssessmentController" customModule="Wild_Medicine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HMl-gB-heM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class sampleController: UIViewController {
+class SampleController: UIViewController {
     var lorText = String()
     var pat = Patient()
     override func viewDidLoad() {
@@ -37,7 +37,7 @@ class sampleController: UIViewController {
         pat.events = events.text!
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextController = segue.destination as! assessmentController
+        let nextController = segue.destination as! AssessmentController
         nextController.myString = lorText
         print(lorText)
         nextController.pat = pat

@@ -40,7 +40,7 @@ class VitalController: UIViewController {
         pat.dias = Int(dias.text!)!
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextController = segue.destination as! sampleController
+        let nextController = segue.destination as! SampleController
         nextController.pat = pat
     }
     /*
