@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		198CA58F20AB1EAE00B9DE0C /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198CA58E20AB1EAE00B9DE0C /* Patient.swift */; };
+		198CA59120AE1D9A00B9DE0C /* sampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198CA59020AE1D9A00B9DE0C /* sampleController.swift */; };
+		198CA59320AE1DC200B9DE0C /* assessmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198CA59220AE1DC200B9DE0C /* assessmentController.swift */; };
+		198CA59520B24C1000B9DE0C /* DecisionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198CA59420B24C1000B9DE0C /* DecisionController.swift */; };
+		198CA59720B24DF200B9DE0C /* ExposeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198CA59620B24DF200B9DE0C /* ExposeController.swift */; };
+		198CA59920B24F8900B9DE0C /* PhysicalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198CA59820B24F8900B9DE0C /* PhysicalController.swift */; };
+		198CA59B20B24FCB00B9DE0C /* VitalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198CA59A20B24FCB00B9DE0C /* VitalController.swift */; };
 		19AB1F7F20AA567F00B604CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB1F7E20AA567F00B604CA /* AppDelegate.swift */; };
 		19AB1F8120AA567F00B604CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB1F8020AA567F00B604CA /* ViewController.swift */; };
 		19AB1F8420AA567F00B604CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AB1F8220AA567F00B604CA /* Main.storyboard */; };
@@ -34,6 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		198CA58E20AB1EAE00B9DE0C /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		198CA59020AE1D9A00B9DE0C /* sampleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleController.swift; sourceTree = "<group>"; };
+		198CA59220AE1DC200B9DE0C /* assessmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = assessmentController.swift; sourceTree = "<group>"; };
+		198CA59420B24C1000B9DE0C /* DecisionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionController.swift; sourceTree = "<group>"; };
+		198CA59620B24DF200B9DE0C /* ExposeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposeController.swift; sourceTree = "<group>"; };
+		198CA59820B24F8900B9DE0C /* PhysicalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalController.swift; sourceTree = "<group>"; };
+		198CA59A20B24FCB00B9DE0C /* VitalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalController.swift; sourceTree = "<group>"; };
 		19AB1F7B20AA567F00B604CA /* Wild-Medicine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wild-Medicine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19AB1F7E20AA567F00B604CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19AB1F8020AA567F00B604CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +113,14 @@
 			children = (
 				19AB1F7E20AA567F00B604CA /* AppDelegate.swift */,
 				19AB1F8020AA567F00B604CA /* ViewController.swift */,
+				198CA58E20AB1EAE00B9DE0C /* Patient.swift */,
 				19AB1F8220AA567F00B604CA /* Main.storyboard */,
+				198CA59A20B24FCB00B9DE0C /* VitalController.swift */,
+				198CA59020AE1D9A00B9DE0C /* sampleController.swift */,
+				198CA59820B24F8900B9DE0C /* PhysicalController.swift */,
+				198CA59620B24DF200B9DE0C /* ExposeController.swift */,
+				198CA59420B24C1000B9DE0C /* DecisionController.swift */,
+				198CA59220AE1DC200B9DE0C /* assessmentController.swift */,
 				19AB1F8520AA568000B604CA /* Assets.xcassets */,
 				19AB1F8720AA568000B604CA /* LaunchScreen.storyboard */,
 				19AB1F8A20AA568000B604CA /* Info.plist */,
@@ -257,7 +278,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				19AB1F8120AA567F00B604CA /* ViewController.swift in Sources */,
+				198CA59320AE1DC200B9DE0C /* assessmentController.swift in Sources */,
 				19AB1F7F20AA567F00B604CA /* AppDelegate.swift in Sources */,
+				198CA59520B24C1000B9DE0C /* DecisionController.swift in Sources */,
+				198CA59920B24F8900B9DE0C /* PhysicalController.swift in Sources */,
+				198CA59720B24DF200B9DE0C /* ExposeController.swift in Sources */,
+				198CA58F20AB1EAE00B9DE0C /* Patient.swift in Sources */,
+				198CA59120AE1D9A00B9DE0C /* sampleController.swift in Sources */,
+				198CA59B20B24FCB00B9DE0C /* VitalController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UW2P3AS97N;
 				INFOPLIST_FILE = "Wild-Medicine/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UW2P3AS97N;
 				INFOPLIST_FILE = "Wild-Medicine/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
