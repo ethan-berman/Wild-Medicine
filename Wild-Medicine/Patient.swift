@@ -74,16 +74,22 @@ class Patient{
         }
         return problems
     }
-    func assess() -> Ailment{
+    func assess() -> [Ailment]{
         let problems = redFlag()
-        let cancer = Ailment()
+        var possibilities = [Ailment]()
         if(problems.count == 0){
 //            if no vital issues, then turn to sample results or findings from physical exam
+//            perform keyword search here within the csv file, return possible matches for ailments
         }else{
+            for item in problems{
+//                perform basic redflag lookup, problems that are likely associated to specific changes
+                if(item == "bp"){
+                    let decompShock = Ailment(name: "Decompensatory Shock")
+                    possibilities.append(decompShock)
+                }
+            }
 //            sort through issues in vital signs and return potential ailments to furhter narrow later
         }
-        
-        
-        return cancer
+        return possibilities
     }
 }
