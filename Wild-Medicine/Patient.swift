@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CSwiftV
+
 class Patient{
     var hr = Int()
     var rr = Int()
@@ -27,7 +29,7 @@ class Patient{
     var last = String()
     var events = String()
     var spinal = Bool()
-    
+//    Questions about musculoskeletal injuries still to be figured out.
     func printAll(){
         print("lor: " + lor)
         print("heart rate: " + String(hr))

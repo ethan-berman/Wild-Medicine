@@ -1,0 +1,16 @@
+PODS:
+  - CSwiftV (0.0.7)
+
+DEPENDENCIES:
+  - CSwiftV (~> 0.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CSwiftV
+
+SPEC CHECKSUMS:
+  CSwiftV: 602a0cb1df5f758d6005eacb6472c9bc752a7e7c
+
+PODFILE CHECKSUM: f4c87ff918d70e0f013ad4d6df3138ab32d48be8
+
+COCOAPODS: 1.5.2
