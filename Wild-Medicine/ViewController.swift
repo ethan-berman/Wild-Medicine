@@ -16,6 +16,8 @@ class ViewController: UIViewController {
 
     @IBAction func newPatient(_ sender: UIButton) {
         print("new patient")
+        let temp = Patient()
+        temp.lookup()
         //instantiate new patient
     }
     @IBAction func airway(_ sender: UIButton) {

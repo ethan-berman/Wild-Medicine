@@ -18,6 +18,7 @@ class AssessmentController: UIViewController {
         print(pat.spinal)
         output.text = pat.lor
         pat.printAll()
+        pat.lookup()
         // Do any additional setup after loading the view.
     }
     override func didReceiveMemoryWarning() {

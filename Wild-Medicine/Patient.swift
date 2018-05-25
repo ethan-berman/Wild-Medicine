@@ -80,6 +80,7 @@ class Patient{
         let problems = redFlag()
         var possibilities = [Ailment]()
         if(problems.count == 0){
+          
 //            if no vital issues, then turn to sample results or findings from physical exam
 //            perform keyword search here within the csv file, return possible matches for ailments
         }else{
@@ -93,5 +94,19 @@ class Patient{
 //            sort through issues in vital signs and return potential ailments to furhter narrow later
         }
         return possibilities
+    }
+    
+    func lookup(){
+        print("hello")
+        guard let csvPath = Bundle.main.path(forResource: "pdata", ofType: "csv") else { return }
+        
+        do {
+            print("doing")
+            let csvData = try String(contentsOfFile: csvPath, encoding: String.Encoding.utf8)
+//            let csv = csvData.csvRows()
+            print(csvData)
+        } catch{
+            print(error)
+        }
     }
 }
