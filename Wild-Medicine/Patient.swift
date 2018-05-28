@@ -78,9 +78,18 @@ class Patient{
     }
     func assess() -> [Ailment]{
         let problems = redFlag()
+        let keywords = symptoms.components(separatedBy: " ")
         var possibilities = [Ailment]()
         if(problems.count == 0){
-          
+            let table = lookup()
+            for item in table{
+                    for word in keywords{
+                        if item[8].range(of: word) != nil {
+                            let match = Ailment(name: item[0])
+                            possibilities.append(match)
+                        }
+                    }
+            }
 //            if no vital issues, then turn to sample results or findings from physical exam
 //            perform keyword search here within the csv file, return possible matches for ailments
         }else{
@@ -96,17 +105,23 @@ class Patient{
         return possibilities
     }
     
-    func lookup(){
+    func lookup()->[[String]]{
+        var output = [[String]]()
         print("hello")
-        guard let csvPath = Bundle.main.path(forResource: "pdata", ofType: "csv") else { return }
-        
+        guard let csvPath = Bundle.main.path(forResource: "pdata", ofType: "csv") else { return output}
+        print(csvPath)
+        print("hello")
         do {
             print("doing")
             let csvData = try String(contentsOfFile: csvPath, encoding: String.Encoding.utf8)
-//            let csv = csvData.csvRows()
-            print(csvData)
+            let rows = csvData.components(separatedBy: "\n")
+            for item in rows {
+                output.append(item.components(separatedBy: ","))
+            }
+            return output
         } catch{
             print(error)
         }
+        return output
     }
 }
