@@ -35,12 +35,12 @@ class SampleController: UIViewController {
         pat.pert = pertinent.text!
         pat.last = last.text!
         pat.events = events.text!
+        print(events.text!)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextController = segue.destination as! AssessmentController
-        nextController.myString = lorText
-        print(lorText)
         nextController.pat = pat
+        nextController.pat.findings = pat.assess()
     }
     
     /*

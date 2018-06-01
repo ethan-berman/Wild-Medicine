@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06009141277E1FDC48E210D1 /* Pods_Wild_MedicineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F08D58334759C1F7D976765 /* Pods_Wild_MedicineTests.framework */; };
-		190B153520B859BC00F2D3BB /* pdata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 190B153420B859BB00F2D3BB /* pdata.csv */; };
+		191E55ED20C1896A003131F2 /* pdata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 191E55E620C18969003131F2 /* pdata.csv */; };
 		198CA58F20AB1EAE00B9DE0C /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198CA58E20AB1EAE00B9DE0C /* Patient.swift */; };
 		198CA59120AE1D9A00B9DE0C /* SampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198CA59020AE1D9A00B9DE0C /* SampleController.swift */; };
 		198CA59320AE1DC200B9DE0C /* AssessmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198CA59220AE1DC200B9DE0C /* AssessmentController.swift */; };
@@ -86,7 +86,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		190B153420B859BB00F2D3BB /* pdata.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = pdata.csv; sourceTree = "<group>"; };
+		191E55E620C18969003131F2 /* pdata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = pdata.csv; path = ../../../Desktop/pdata.csv; sourceTree = "<group>"; };
 		195F7D0720B731460022003B /* CSwiftV.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CSwiftV.xcodeproj; path = ../CSwiftV/CSwiftV.xcodeproj; sourceTree = "<group>"; };
 		198CA58E20AB1EAE00B9DE0C /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		198CA59020AE1D9A00B9DE0C /* SampleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleController.swift; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 		19AB1F7220AA567F00B604CA = {
 			isa = PBXGroup;
 			children = (
-				190B153420B859BB00F2D3BB /* pdata.csv */,
+				191E55E620C18969003131F2 /* pdata.csv */,
 				19AB1F7D20AA567F00B604CA /* Wild-Medicine */,
 				19AB1F9220AA568000B604CA /* Wild-MedicineTests */,
 				19AB1F9D20AA568000B604CA /* Wild-MedicineUITests */,
@@ -182,7 +182,6 @@
 			children = (
 				19AB1F7E20AA567F00B604CA /* AppDelegate.swift */,
 				19AB1F8020AA567F00B604CA /* ViewController.swift */,
-				198CA58E20AB1EAE00B9DE0C /* Patient.swift */,
 				19AB1F8220AA567F00B604CA /* Main.storyboard */,
 				198CA59A20B24FCB00B9DE0C /* VitalController.swift */,
 				198CA59020AE1D9A00B9DE0C /* SampleController.swift */,
@@ -190,6 +189,7 @@
 				198CA59620B24DF200B9DE0C /* ExposeController.swift */,
 				198CA59420B24C1000B9DE0C /* DecisionController.swift */,
 				198CA59220AE1DC200B9DE0C /* AssessmentController.swift */,
+				198CA58E20AB1EAE00B9DE0C /* Patient.swift */,
 				198CA59C20B2F70D00B9DE0C /* Ailment.swift */,
 				19AB1F8520AA568000B604CA /* Assets.xcassets */,
 				19AB1F8720AA568000B604CA /* LaunchScreen.storyboard */,
@@ -390,10 +390,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				190B153520B859BC00F2D3BB /* pdata.csv in Resources */,
 				19AB1F8920AA568000B604CA /* LaunchScreen.storyboard in Resources */,
 				19AB1F8620AA568000B604CA /* Assets.xcassets in Resources */,
 				19AB1F8420AA567F00B604CA /* Main.storyboard in Resources */,
+				191E55ED20C1896A003131F2 /* pdata.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

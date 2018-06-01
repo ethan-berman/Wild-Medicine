@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         print("new patient")
         let temp = Patient()
         temp.lookup()
+        let ail = Ailment(name: "Decompensatory Shock")
+        print(ail.hr)
         //instantiate new patient
     }
     @IBAction func airway(_ sender: UIButton) {

@@ -29,6 +29,8 @@ class Patient{
     var last = String()
     var events = String()
     var spinal = Bool()
+    var table: [[String]]?
+    var findings: [Ailment]?
 //    Questions about musculoskeletal injuries still to be figured out.
     func printAll(){
         print("lor: " + lor)
@@ -80,9 +82,11 @@ class Patient{
         let problems = redFlag()
         let keywords = symptoms.components(separatedBy: " ")
         var possibilities = [Ailment]()
+        print(problems)
         if(problems.count == 0){
-            let table = lookup()
-            for item in table{
+            print("no problems entering keyword lookup")
+            table = lookup()
+            for item in table!{
                     for word in keywords{
                         if item[8].range(of: word) != nil {
                             let match = Ailment(name: item[0])
@@ -107,17 +111,14 @@ class Patient{
     
     func lookup()->[[String]]{
         var output = [[String]]()
-        print("hello")
         guard let csvPath = Bundle.main.path(forResource: "pdata", ofType: "csv") else { return output}
-        print(csvPath)
-        print("hello")
         do {
-            print("doing")
             let csvData = try String(contentsOfFile: csvPath, encoding: String.Encoding.utf8)
             let rows = csvData.components(separatedBy: "\n")
             for item in rows {
                 output.append(item.components(separatedBy: ","))
             }
+            print(output)
             return output
         } catch{
             print(error)

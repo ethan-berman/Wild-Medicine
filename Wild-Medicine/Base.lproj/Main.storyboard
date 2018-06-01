@@ -177,7 +177,6 @@
         <!--Vital Controller-->
         <scene sceneID="BmO-9m-V9h">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0cb-WT-8ab" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Vital" id="Sqq-9s-xvL" customClass="VitalController" customModule="Wild_Medicine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KSi-LV-ESS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -312,6 +311,7 @@
                         <outlet property="temp" destination="bcY-EI-hDe" id="WFq-Di-Pi5"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0cb-WT-8ab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1213.5999999999999" y="1289.5052473763119"/>
         </scene>
@@ -400,7 +400,6 @@
                                 <state key="normal" title="Submit SAMPLE"/>
                                 <connections>
                                     <action selector="submit:" destination="gQB-IU-VHL" eventType="touchUpInside" id="6w1-TN-wwC"/>
-                                    <action selector="submit:" destination="JT8-He-cSo" eventType="touchUpInside" id="tu7-ET-zBA"/>
                                     <segue destination="b7o-2K-6mY" kind="show" id="46A-Js-LlA"/>
                                 </connections>
                             </button>
@@ -432,7 +431,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oak-kw-wk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="JT8-He-cSo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2031.2" y="1480.2098950524739"/>
         </scene>
@@ -458,6 +456,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKe-wM-5F5">
+                                <rect key="frame" x="135" y="230" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="print all"/>
+                                <connections>
+                                    <action selector="printall:" destination="b7o-2K-6mY" eventType="touchUpInside" id="wjL-wC-eK8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="m8l-BP-L0C"/>

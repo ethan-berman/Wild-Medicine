@@ -9,23 +9,43 @@
 import UIKit
 
 class AssessmentController: UIViewController {
-    var myString = String()
     var pat = Patient()
     @IBOutlet weak var output: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(myString)
         print(pat.spinal)
-        output.text = pat.lor
+        output.text = pat.symptoms
         pat.printAll()
         pat.lookup()
+        print(pat.table)
+        
         // Do any additional setup after loading the view.
     }
+    let fuck = Ailment(name: "Decompensatory Shock")
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func printall(_ sender: UIButton) {
+        //pat.printAll()
+        compare(patient: pat, ailment: fuck)
+    }
     
+    func compare(patient: Patient, ailment: Ailment){
+        let mirrorObject = Mirror(reflecting: pat)
+        for (index, attr) in mirrorObject.children.enumerated(){
+            if let propertyName = attr.label as String! {
+                print("Attr \(index): \(propertyName) = \(attr.value)")
+            }
+        }
+        
+        let mirrorObject2 = Mirror(reflecting: ailment)
+        for (index, attr) in mirrorObject2.children.enumerated(){
+            if let propertyName = attr.label as String! {
+                print("Attr \(index): \(propertyName) = \(attr.value)")
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation
