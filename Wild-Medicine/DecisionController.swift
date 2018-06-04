@@ -20,13 +20,38 @@ class DecisionController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBOutlet weak var moi: UITextField!
+    @IBOutlet weak var cc: UITextField!
+    @IBOutlet weak var age: UITextField!
     var pat = Patient()
     
     @IBAction func stabilize(_ sender: UIButton) {
         pat.spinal = true
+        if let someText = age.text{
+            if let someInt = Int(someText){
+                pat.age = someInt
+            }
+        }
+        if let someText = cc.text{
+            pat.cc = someText
+        }
+        if let someText = moi.text{
+            pat.moi = someText
+        }
     }
     @IBAction func release(_ sender: UIButton) {
         pat.spinal = false
+        if let someText = age.text{
+            if let someInt = Int(someText){
+                pat.age = someInt
+            }
+        }
+        if let someText = cc.text{
+            pat.cc = someText
+        }
+        if let someText = moi.text{
+            pat.moi = someText
+        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextController = segue.destination as! ExposeController

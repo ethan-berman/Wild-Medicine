@@ -19,13 +19,6 @@ class AssessmentController: UIViewController {
         super.viewDidLoad()
         print(pat.spinal)
         pat.printAll()
-        for item in pat.findings!{
-            let mirrorObject = Mirror(reflecting: item)
-            for (index, attr) in mirrorObject.children.enumerated(){
-               // view.adddChild(UILabel(text: attr))
-            }
-        }
-        
         // Do any additional setup after loading the view.
     }
    
@@ -37,11 +30,15 @@ class AssessmentController: UIViewController {
     @IBAction func show(_ sender: UIButton) {
         if(pat.findings?.count != 0){
             name.text = pat.findings![counter].name
-            desc.text = pat.findings![counter].description
+            var descText = pat.findings![counter].description.replacingOccurrences(of: "@@", with: ".")
+            descText = descText.replacingOccurrences(of: "%%", with: ",")
+            desc.text = descText
             var sympText = ""
             for item in pat.findings![counter].symptoms{
-                sympText += item
+                sympText += item + ", "
             }
+            sympText = sympText.replacingOccurrences(of: "%%", with: ",")
+            sympText = sympText.replacingOccurrences(of: "@@", with: ".")
             symp.text = sympText
         
         }
@@ -68,28 +65,12 @@ class AssessmentController: UIViewController {
     }
     @IBOutlet weak var finishButton: UIButton!
     @IBAction func finish(_ sender: Any) {
-        
+        performSegue(withIdentifier: "soapSeg", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextController = segue.destination as! SoapController
         nextController.pat = pat
         nextController.final = confirmed
-    }
-    //    Deprecated
-    func compare(patient: Patient, ailment: Ailment){
-        let mirrorObject = Mirror(reflecting: pat)
-        for (index, attr) in mirrorObject.children.enumerated(){
-            if let propertyName = attr.label as String! {
-                print("Attr \(index): \(propertyName) = \(attr.value)")
-            }
-        }
-        
-        let mirrorObject2 = Mirror(reflecting: ailment)
-        for (index, attr) in mirrorObject2.children.enumerated(){
-            if let propertyName = attr.label as String! {
-                print("Attr \(index): \(propertyName) = \(attr.value)")
-            }
-        }
     }
     //new approach: list out all of the findings for an ailment and have user determine if they are relevant or not
     /*

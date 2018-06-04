@@ -14,9 +14,24 @@ class SoapController: UIViewController {
     var final = [Ailment]()
     var soapNote = String()
     
+    @IBOutlet weak var soapDisplay: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        var problemNames = ""
+        var treatments = ""
+        var evacPlans = ""
+        for item in final{
+            problemNames += item.name + " "
+            treatments += item.treatment + " "
+            evacPlans += item.evac + " "
+        }
+        treatments = treatments.replacingOccurrences(of: "%%", with: ",")
+        treatments = treatments.replacingOccurrences(of: "@@", with: ".")
+        evacPlans = evacPlans.replacingOccurrences(of: "%%", with: ",")
+        evacPlans = evacPlans.replacingOccurrences(of: "%%", with: ",")
 
+        soapNote = "I have a " + String(pat.age) + " year-old whose chief complaint is " + pat.cc + " The Moi is: " + pat.moi + ".  The patient is currently " + pat.lor + ".  Patient has " + pat.symptoms + ".  The patient's vital signs are: LOR: " + pat.lor + " HR: " + String(pat.hr) + " RR: " + String(pat.rr) + " SCTM: " + pat.sctm + " Based on the MOI we have reason to believe in a spinal injury: " + String(pat.spinal) + ".  We suspect the following problems: " + problemNames + "Our treatment includes: " + treatments + " And our evac plan is: " + evacPlans
+        soapDisplay.text! = soapNote
         // Do any additional setup after loading the view.
     }
 

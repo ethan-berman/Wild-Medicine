@@ -29,13 +29,24 @@ class SampleController: UIViewController {
     @IBOutlet weak var last: UITextField!
     @IBOutlet weak var events: UITextField!
     @IBAction func submit(_ sender: UIButton) {
-        pat.symptoms = symptoms.text!
-        pat.allergies = allergies.text!
-        pat.medication = medications.text!
-        pat.pert = pertinent.text!
-        pat.last = last.text!
-        pat.events = events.text!
-        print(events.text!)
+        if let someText = symptoms.text{
+            pat.symptoms = someText
+        }
+        if let someText = allergies.text{
+            pat.allergies = someText
+        }
+        if let someText = medications.text{
+            pat.medication = someText
+        }
+        if let someText = pertinent.text{
+            pat.pert = someText
+        }
+        if let someText = last.text{
+            pat.last = someText
+        }
+        if let someText = events.text{
+            pat.events = someText
+        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextController = segue.destination as! AssessmentController

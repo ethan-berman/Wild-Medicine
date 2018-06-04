@@ -30,14 +30,40 @@ class VitalController: UIViewController {
     @IBOutlet weak var dias: UITextField!
     
     @IBAction func submit(_ sender: UIButton!) {
-        pat.lor = lor.text!
-        pat.hr = Int(hr.text!)!
-        pat.rr = Int(rr.text!)!
-        pat.p = pupil.text!
-        pat.sctm = sctm.text!
-        pat.t = Double(temp.text!)!
-        pat.syst = Int(syst.text!)!
-        pat.dias = Int(dias.text!)!
+        if let someText = lor.text{
+            pat.lor = someText
+        }
+        if let someText = hr.text{
+            if let someInt = Int(someText){
+                pat.hr = someInt
+            }
+        }
+        if let someText = rr.text{
+            if let someInt = Int(someText){
+                pat.rr = someInt
+            }
+        }
+        if let someText = pupil.text{
+            pat.p = someText
+        }
+        if let someText = sctm.text{
+            pat.sctm = someText
+        }
+        if let someText = temp.text{
+            if let someDub = Double(someText){
+                pat.t = someDub
+            }
+        }
+        if let someText = syst.text{
+            if let someInt = Int(someText){
+                pat.syst = someInt
+            }
+        }
+        if let someText = dias.text{
+            if let someInt = Int(someText){
+                pat.dias = someInt
+            }
+        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextController = segue.destination as! SampleController

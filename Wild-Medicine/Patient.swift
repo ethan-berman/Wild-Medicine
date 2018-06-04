@@ -85,6 +85,7 @@ class Patient{
         print(problems)
         print("no problems entering keyword lookup")
         table = lookup()
+        print(table)
         for item in table!{
                 for word in keywords{
                     if item[8].range(of: word) != nil {

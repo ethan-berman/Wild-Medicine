@@ -15,8 +15,7 @@ class Ailment{
     var hr = String()
     var rr = String()
     var sctm = String()
-    var syst = String()
-    var dias = String()
+    var bp = String()
     var p = String()
     var temp = String()
     var symptoms = [String]()
@@ -26,18 +25,17 @@ class Ailment{
     init(name: String){
         let qualities = lookup(name: name)
         self.name = name
-        self.lor = qualities[2]
-        self.hr = qualities[3]
-        self.rr = qualities[4]
-        self.sctm = qualities[5]
-        self.syst = qualities[6]
-        self.dias = qualities[7]
-        self.p = qualities[8]
-        self.temp = qualities[9]
-        self.symptoms = qualities[10].components(separatedBy: ",")
-        self.treatment = qualities[11]
-        self.evac = qualities[12]
-        self.description = qualities[13]
+        self.lor = qualities[1]
+        self.hr = qualities[2]
+        self.rr = qualities[3]
+        self.sctm = qualities[4]
+        self.bp = qualities[5]
+        self.p = qualities[6]
+        self.temp = qualities[7]
+        self.symptoms = qualities[8].components(separatedBy: "%%")
+        self.treatment = qualities[9]
+        self.evac = qualities[10]
+        self.description = qualities[11]
     }
 //    make two different constructors for an ailment, one can either know the name based on redflags, or
 //    an ailment can be initialized with all information if found through a keyword lookup process.
