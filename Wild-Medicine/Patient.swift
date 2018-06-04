@@ -83,29 +83,46 @@ class Patient{
         let keywords = symptoms.components(separatedBy: " ")
         var possibilities = [Ailment]()
         print(problems)
-        if(problems.count == 0){
-            print("no problems entering keyword lookup")
-            table = lookup()
-            for item in table!{
-                    for word in keywords{
-                        if item[8].range(of: word) != nil {
-                            let match = Ailment(name: item[0])
-                            possibilities.append(match)
-                        }
+        print("no problems entering keyword lookup")
+        table = lookup()
+        for item in table!{
+                for word in keywords{
+                    if item[8].range(of: word) != nil {
+                        let match = Ailment(name: item[0])
+                        possibilities.append(match)
                     }
-            }
-//            if no vital issues, then turn to sample results or findings from physical exam
-//            perform keyword search here within the csv file, return possible matches for ailments
-        }else{
-            for item in problems{
-//                perform basic redflag lookup, problems that are likely associated to specific changes
-                if(item == "bp"){
-                    let decompShock = Ailment(name: "Decompensatory Shock")
-                    possibilities.append(decompShock)
                 }
-            }
-//            sort through issues in vital signs and return potential ailments to furhter narrow later
         }
+//      if no vital issues, then turn to sample results or findings from physical exam
+//      perform keyword search here within the csv file, return possible matches for ailment
+        for item in problems{
+//                perform basic redflag lookup, problems that are likely associated to specific changes
+            if(item == "bp"){
+                let decompShock = Ailment(name: "Decompensatory Shock")
+                possibilities.append(decompShock)
+            }
+            if(item=="t"){
+                let flu = Ailment(name: "Flu")
+                possibilities.append(flu)
+                }
+            if(item=="hr"){
+                possibilities.append(Ailment(name: "Asthma"))
+                possibilities.append(Ailment(name: "Anxiety"))
+                possibilities.append(Ailment(name: "Hyperventilation"))
+                possibilities.append(Ailment(name: "Heat Stroke"))
+                possibilities.append(Ailment(name: "Heat Exhaustion"))
+            }
+            if(item=="sctm"){
+                possibilities.append(Ailment(name: "Heat Exhaustion"))
+                possibilities.append(Ailment(name: "Heat Stroke"))
+                possibilities.append(Ailment(name: "HAPE"))
+                possibilities.append(Ailment(name: "Hyperglycemia"))
+                possibilities.append(Ailment(name: "Hypoglycemia"))
+                possibilities.append(Ailment(name: "Serious Head Injury"))
+            }
+        }
+//            sort through issues in vital signs and return potential ailments to furhter narrow later
+        
         return possibilities
     }
     

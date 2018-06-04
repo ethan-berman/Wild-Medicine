@@ -22,6 +22,7 @@ class Ailment{
     var symptoms = [String]()
     var treatment = String()
     var evac = String()
+    var description = String()
     init(name: String){
         let qualities = lookup(name: name)
         self.name = name
@@ -36,6 +37,7 @@ class Ailment{
         self.symptoms = qualities[10].components(separatedBy: ",")
         self.treatment = qualities[11]
         self.evac = qualities[12]
+        self.description = qualities[13]
     }
 //    make two different constructors for an ailment, one can either know the name based on redflags, or
 //    an ailment can be initialized with all information if found through a keyword lookup process.
